@@ -288,8 +288,26 @@ tags:
       ```
       ![](http://upload-images.jianshu.io/upload_images/9047034-6fc6ef4dfcfe3a1c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
       总之，记住公式：
-      `对象.__proto__ === 函数.prototype`
-      `函数.__proto__ === Function.prototype`
+      ```
+      对象.__proto__ === (对象原型)函数.prototype
+      函数.__proto__ === Function.prototype
+      Function.prototype.__proto_ === Object.prototype
+      函数.prototype.__proto_ === Object.prototype
+
+      // 测试一下代码就可以证明
+      function fc(){}
+
+      var o = new fc()
+      o.__proto__ === fc.prototype
+      fc.__proto__ === Function.prototype
+      fc.prototype.__proto__ === Object.prototype
+      Object.prototype.__proto__ === null
+      ```
+      也就是说:
+      - 所有对象的`__proto__`引用此对象原型函数的`prototype`属性
+      - 所有函数的`__proto__`引用`Function.protype`,不管你自己写的还是 api
+      - `Function.protype.__proto__`以及你自己写的函数的共用属性`prototype`的`__proto__`引用`Object.prototype`
+      ![](https://camo.githubusercontent.com/b8806bd76878881e7f843b0e77643aff26594ecf/687474703a2f2f3773626e62612e636f6d312e7a302e676c622e636c6f7564646e2e636f6d2f6769746875622d6a732d70726f746f747970652e6a7067)
       [参考](https://github.com/creeperyang/blog/issues/9)
     * 那么，Object.prototype对象有没有它的原型呢？回答是有的，就是没有任何属性和方法的null对象，而null对象没有自己的原型。
     * `Object.getPrototypeOf(Object.prototype)  // null`
