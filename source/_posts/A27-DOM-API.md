@@ -67,8 +67,8 @@ docuemnt.body.previousElementSibling // <head></head>
   它返回一个整数来表示节点的类型
   (之所以这样是因为当年的计算机还没这么发达，而1比element的字节小多了)
   以下几个需知：
-  1  元素节点， Eg：<div>、<p>
-  3  文本节点， 元素或者属性中实际的文字，比如<p>段落</p>中的段落二字
+  1  元素节点， Eg：`<div>、<p>`
+  3  文本节点， 元素或者属性中实际的文字，比如`<p>段落</p>`中的段落二字
   9  Document节点， 
   11 DocumentFragment节点 // 很特殊的一个节点（暂时我还不清楚，google DocumentFragment优化）
   ```
@@ -80,11 +80,36 @@ docuemnt.body.previousElementSibling // <head></head>
   ```
 - `innerText`与`textContent` -[MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Node/textContent)
   区别:
-  - textContent 会获取所有元素的内容，包括 <script> 和 <style> 元素，然而 innerText 不会。
+  - textContent 会获取所有元素的内容，包括 `<script> 和 <style>` 元素，然而 innerText 不会。
   - innerText意识到样式，并且不会返回隐藏元素的文本(设置display:none的元素)，而textContent会。
   - 由于 innerText 受 CSS 样式的影响，它会触发重排（reflow），但textContent 不会。
   - 与 textContent 不同的是, 在 Internet Explorer (对于小于等于 IE11 的版本) 中对 innerText 进行修改， 不仅会移除当前元素的子节点，而且还会永久性地破坏所有后代文本节点（所以不可能再次将节点再次插入到任何其他元素或同一元素中）。
+- `childNodes` -[MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/NodeList#A_sometimes-live_collection)
+  Node.childNodes 返回包含指定节点的子节点的集合，该集合为即时更新的集合（live collection）。
+  ```
+  var parent = document.getElementById('parent');
+  parent.childNodes.length // 2
+  parent.appendChild(document.createElement('div'));
+  parent.childNodes.length // 请问现在 length 是多少
 
+  // 3
+
+  // 与之相反的是 querySelectorAll() ,它返回的是一个静态的 NodeList
+  var allDiv = document.querySelectorAll('div>
+  allDiv.length // 假设是 2
+  document.body.appendChild(  document.createElement('div')  )
+  allDiv.length // 请问现在 length 的值是多少？？？
+  // 2
+  // querySelectorAll方法不属于 node，是document 和 element 的
+  ```
+- HTMLCollection与NodeList的区别有
+   + HTMLCollection实例对象的成员只能是Element节点，NodeList实例对象的成员可以包含其他节点。
+   + HTMLCollection实例对象可以用id属性或name属性引用节点元素，NodeList只能使用数字索引引用。
+   + HTML DOM 中的 HTMLCollection 是即时更新的（live）；
+     当其所包含的文档结构发生改变时，它会自动更新。
+     NodeList 对象大多数情况下是个实时集合。
+     意思是说，如果文档中的节点树发生变化，则已经存在的 NodeList 对象也可能会变化。例如，Node.childNodes 是实时的。
+     在另一些情况下，NodeList 是一个静态集合，也就意味着随后对文档对象模型的任何改动都不会影响集合的内容。document.querySelectorAll 返回一个静态的 NodeList。
 ### Node 方法 （如果一个属性是函数，那么这个属性就也叫做方法；换言之，方法是函数属性）
 - `appendChild()`
 - `cloneNode() // 分深、浅拷贝`
@@ -144,5 +169,6 @@ docuemnt.body.previousElementSibling // <head></head>
 - writeln()
 
 ## Element Api -[MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Element)
+
 
 关于 DOM API 更多见之后写的常用 API。（待续）
