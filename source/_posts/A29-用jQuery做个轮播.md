@@ -52,10 +52,28 @@ tags:
   显示还是不显示？那是 css 的活。
   `$div.addClass('active')`
 
+# 思路
+1. 将图片全部放到一个div里，把图片放平，图片最好是一样大小的
+2. 然后用一个窗口来看图片，图片从左到右挨个出现，就好像以前的电影胶带
+3. 有了思路，剩下的就是实现和改bug，这次是用jq来写，会出现很多不认识的api，直接查文档就行了
 
+# 关于封装
+1. 从 API 开始思考
+2. 尽量能让人看见就明白是干嘛的
+
+# 成果
+- [预览](https://zerolhao.github.io/task-code/A29-jQuery-carousel/index.html)
+- [代码](https://github.com/zerolhao/task-code/tree/master/A29-jQuery-carousel)
 
 # 本次任务用到的 jQuery API
-1. `.on()` -[link](http://api.jquery.com/on/)
+1. `.on()` -[link](https://www.jquery123.com/on/)
+2. `index()` -[link](https://www.jquery123.com/index/)
+3. `.eq()` -[link](https://www.jquery123.com/eq/)
+4. `.trigger()` -[link](https://www.jquery123.com/trigger/)
+5. `.addClass()` -[link](https://www.jquery123.com/addClass/)
+6. `.removeClass()` -[link](https://www.jquery123.com/removeClass/)
+7. `.siblings()` -[link](https://www.jquery123.com/siblings/)
+8. `.css()` -[link](https://www.jquery123.com/css/)
 
 # 优化原则
 1. 不使用 CSS 来表示复杂的行为，不要使用IE发明的CSS Expressions。
