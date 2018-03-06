@@ -128,3 +128,5 @@ if (path === '/pay'){
   3. 
   console.log('pathWithQuery', 'queryString', 'path', 'query', 'method')
   console.log(pathWithQuery, queryString, path, query, method)
+
+参考文章：[阮一峰](http://www.ruanyifeng.com/blog/2016/04/same-origin-policy.html)
