@@ -36,6 +36,10 @@ readyState是一个只读属性，用一个整数和对应的常量，表示XMLH
 > 3，对应常量LOADING，表示正在接收服务器传来的body部分的数据，如果responseType属性是text或者空字符串，responseText就会包含已经收到的部分信息。
 > 4，对应常量DONE，表示服务器数据已经完全接收，或者本次接收已经失败了。
 
+- [readyStateChange](http://javascript.ruanyifeng.com/bom/ajax.html#toc22)
+`readyState`属性的值发生改变，就会触发readyStateChange事件。
+我们可以通过onReadyStateChange属性，指定这个事件的回调函数，对不同状态进行不同处理。尤其是当状态变为4的时候，表示通信成功，这时回调函数就可以处理服务器传送回来的数据。
+
 - [onreadystatechange](http://javascript.ruanyifeng.com/bom/ajax.html#toc3)
 onreadystatechange属性指向一个回调函数，当readystatechange事件发生的时候，这个回调函数就会调用，并且XMLHttpRequest实例的readyState属性也会发生变化。
 另外，如果使用abort()方法，终止XMLHttpRequest请求，onreadystatechange回调函数也会被调用。
