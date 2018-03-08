@@ -184,13 +184,15 @@ window.jQuery = function(nodeOrSelector){
 }
 window.$ = window.jQuery
 
+/* Promise基本逻辑
+//注意Promise是 window 的API
 window.Promise = function(fn){
   // ...
   return {
     then: function(){}
   }
 }
-
+*/
 window.jQuery.ajax = function({url, method, body, headers}){
   return new Promise(function(resolve, reject){
     let request = new XMLHttpRequest()
@@ -220,12 +222,24 @@ myButton.addEventListener('click', (e)=>{
       'content-type':'application/x-www-form-urlencoded',
       'frank': '18'
     }
-  })
-
+  }).then( // then会返回一个Promise对象，以供调用，进行链式操作
+    (text)=>{console.log(text)}, //成功就调用这个函数
+    (request)=>{console.log(request)} //失败就调用这个函数
+  ).then(
+    (text)=>{console.log('success')}, //上面成功了会继续调用这个函数
+    (request)=>{console.log('fail')} //上面失败了会继续调用这个函数
+  )
+  // 等于下面,上面其实就是jq的链式操作
   promise.then(
     (text)=>{console.log(text)},
     (request)=>{console.log(request)}
   )
+  Promise.then(
+    (text)=>{console.log('success')},
+    (request)=>{console.log('fail')}
+  )
 
 })
 ```
+[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+[阮一峰](http://es6.ruanyifeng.com/#docs/promise)
