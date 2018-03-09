@@ -226,7 +226,7 @@ myButton.addEventListener('click', (e)=>{
     (text)=>{console.log(text)}, //成功就调用这个函数
     (request)=>{console.log(request)} //失败就调用这个函数
   ).then(
-    (text)=>{console.log('success')}, //上面成功了会继续调用这个函数
+    (text)=>{console.log('success')}, //上面then里面代码成功了会继续调用这个函数，不管它执行的是它的第一个还是第二个参数（函数）
     (request)=>{console.log('fail')} //上面失败了会继续调用这个函数
   )
   // 等于下面,上面其实就是jq的链式操作
