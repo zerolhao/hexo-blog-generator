@@ -157,7 +157,7 @@ b // 'a'
 
 ### 回调的问题
 问题是每个程序员的回调名不一样
-
+# [阮一峰-JS异步编程的四种方法](http://www.ruanyifeng.com/blog/2012/12/asynchronous%EF%BC%BFjavascript.html)
 # Promise 解决了这个问题
 基本逻辑
 ```
