@@ -1,7 +1,8 @@
 ---
 title: Hexo+GitHub博客搭建
 date: 2017-11-24 20:24:08
-tags:
+tags: [hexo]
+categories: hexo 
 ---
 ## 如何使用Hexo+GitHub搭建一个博客
 

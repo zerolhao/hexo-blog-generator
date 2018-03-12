@@ -1,7 +1,8 @@
 ---
 title: A20-js里的数据
 date: 2018-01-07 22:37:40
-tags:
+tags: [JavaScript, 数据类型]
+categories: 饥人谷
 ---
 
 - ### 非标准的语法

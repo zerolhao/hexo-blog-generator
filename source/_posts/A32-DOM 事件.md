@@ -1,7 +1,8 @@
 ---
 title: A32-DOM 事件
 date: 2018-03-05 21:09:36
-tags:
+tags: [DOM]
+categories: 饥人谷
 ---
 # 如何做「点击其他地方关闭浮层」
 - 防止冒泡

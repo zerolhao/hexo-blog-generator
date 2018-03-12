@@ -1,7 +1,8 @@
 ---
 title: A27-DOM API
 date: 2018-01-25 22:23:28
-tags:
+tags: [JavaScript,DOM-API]
+categories: 饥人谷
 ---
 
 ## DOM

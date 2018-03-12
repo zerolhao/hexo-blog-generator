@@ -1,7 +1,8 @@
 ---
 title: A25-JS数组
 date: 2018-01-20 23:34:15
-tags:
+tags: [JavaScript,数组]
+categories: 饥人谷
 ---
 
 - ## `Array` -[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)

@@ -1,7 +1,8 @@
 ---
 title: H33-JSONP
 date: 2018-03-05 21:13:53
-tags:
+tags: [JSONP]
+categories: 饥人谷
 ---
 # 数据库是什么
 1. 文件系统是一种数据库

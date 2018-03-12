@@ -1,7 +1,8 @@
 ---
 title: H34-AJAX
 date: 2018-03-07 11:16:05
-tags:
+tags: [AJAX,JSON,同源策略,CORS,跨域]
+categories: 饥人谷
 ---
 # 如何发请求？
 用 form 可以发请求，但是会刷新页面或新开页面

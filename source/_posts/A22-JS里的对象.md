@@ -1,7 +1,8 @@
 ---
 title: A22-JS里的对象
 date: 2018-01-17 23:37:46
-tags:
+tags: [JavaScript,对象]
+categories: 饥人谷
 ---
 
 - ## 全局对象 window

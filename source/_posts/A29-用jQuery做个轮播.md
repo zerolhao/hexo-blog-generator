@@ -1,7 +1,8 @@
 ---
 title: A29-用jQuery做个轮播
 date: 2018-01-27 23:12:29
-tags:
+tags: [jQuery, 轮播]
+categories: 饥人谷
 ---
 
 # 这次我们将用jQuery做一个轮播

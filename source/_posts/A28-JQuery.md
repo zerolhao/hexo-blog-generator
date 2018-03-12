@@ -1,7 +1,8 @@
 ---
 title: A28-JQuery
 date: 2018-01-26 23:43:33
-tags:
+tags: [jQuery]
+categories: 饥人谷
 ---
 
 # 这次我们自己实现一个类似Query的API（简化版）

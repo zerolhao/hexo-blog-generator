@@ -1,7 +1,8 @@
 ---
 title: a21 JS 里的类型
 date: 2018-01-15 22:19:20
-tags:
+tags: [JavaScript, 数据类型]
+categories: 饥人谷
 ---
 
 - ## 类型转换

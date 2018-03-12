@@ -1,7 +1,8 @@
 ---
 title: A26-JS函数
 date: 2018-01-24 23:34:02
-tags:
+tags: [JavaScript,函数]
+categories: 饥人谷
 ---
 
 ## Function -[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function)

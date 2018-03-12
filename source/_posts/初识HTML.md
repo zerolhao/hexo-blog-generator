@@ -1,7 +1,8 @@
 ---
 title: 初识HTML
 date: 2017-12-02 19:04:07
-tags:
+tags: [html]
+categories: 饥人谷
 ---
 ## 1. 万维网联盟（World  Wide Web Consortium, W3C）,又称 W3C 理事会，是万维网的主要国际标准组织。
 

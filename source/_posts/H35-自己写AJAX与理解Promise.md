@@ -1,7 +1,8 @@
 ---
 title: H35-自己写AJAX与理解Promise
 date: 2018-03-07 23:56:22
-tags:
+tags: [AJAX,Promise]
+categories: 饥人谷
 ---
 # AJAX 的所有功能
 - 客户端的JS发起请求（浏览器上的）
