@@ -9,6 +9,10 @@ categories: 饥人谷
 
 # Session 与 Cookie 的关系
 一般来说，Session 基于 Cookie 来实现。
+区别：
+Cookie 保存在客户端，每次都随请求发送给 Server
+Session 保存在 Server 的内存里，其 Session ID 是通过 Cookie 发送给客户端的
+
 [知乎](https://www.zhihu.com/question/19786827)
 *Cookie*
 本质是HTTP协议的一个内容
